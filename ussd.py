@@ -1,8 +1,5 @@
-# MTN USSD Data Purchase
-
 balance = 2000
 
-# Step 1: Dial the code
 code = input("Dial USSD code: ")
 while code != "*312#":
     print("Invalid code. Try again.")
@@ -12,7 +9,6 @@ buy_again = "1"
 
 while buy_again == "1":
 
-    # Step 2: Main menu
     print("\n--- MTN Data Plans ---")
     print("1. Daily Plans")
     print("2. Weekly Plans")
@@ -23,7 +19,6 @@ while buy_again == "1":
         print("Invalid option. Try again.")
         category = input("Reply with option: ")
 
-    # Step 3: Show plans for the chosen category
     if category == "1":
         print("\n--- Daily Plans ---")
         print("1. 100MB - N100")
@@ -43,7 +38,6 @@ while buy_again == "1":
         print("Invalid option. Try again.")
         plan = input("Reply with option: ")
 
-    # Step 4: Save the data size and price
     if category == "1" and plan == "1":
         mb = "100MB"
         price = 100
@@ -63,7 +57,6 @@ while buy_again == "1":
         mb = "6GB"
         price = 2500
 
-    # Step 5: Confirm
     print(f"\nYou are about to buy {mb} for N{price}")
     print("1. Confirm")
     print("2. Cancel")
@@ -71,7 +64,6 @@ while buy_again == "1":
 
     if confirm == "1":
 
-        # Step 6: PIN (3 attempts)
         attempts = 0
         pin = input("Enter your PIN: ")
 
@@ -80,7 +72,6 @@ while buy_again == "1":
             print("Wrong PIN. Try again.")
             pin = input("Enter your PIN: ")
 
-        # Step 7: Check PIN, then balance
         if pin == "1234":
             if balance >= price:
                 balance = balance - price
@@ -94,7 +85,6 @@ while buy_again == "1":
     else:
         print("Transaction cancelled.")
 
-    # Step 8: Buy again?
     if buy_again == "1":
         buy_again = input("\nBuy another plan? 1. Yes  2. No: ")
 
