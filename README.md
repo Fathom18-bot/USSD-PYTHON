@@ -48,7 +48,7 @@ A simple Python program that simulates buying mobile data on the MTN network usi
 3. Open the project in PyCharm (or any editor).
 4. Run the file:
    ```
-   python ussd.py
+   ussd.py
    ```
 
 ## Sample Run
